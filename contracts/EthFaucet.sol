@@ -6,9 +6,6 @@ import "./Owned.sol";
 
 contract EthFaucet is Owned {
     mapping(address => bool) hasWithdrawn;
-    
-    // Add funds to contract
-    receive() external payable {}
 
     // Contract destructor. Inherits owner from Owned contract
     function destroy() public onlyOwner {
@@ -27,4 +24,7 @@ contract EthFaucet is Owned {
         // Send withdraw_amount to msg.sender
         payable(msg.sender).transfer(withdraw_amount);
     }
+
+    // Add funds to contract
+    receive() external payable {}
 }

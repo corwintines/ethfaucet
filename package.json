@@ -6,8 +6,9 @@
   "type": "commonjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "node": "hardhat node --port 18545 --hostname 0.0.0.0",
-    "deploy:local": "hardhat run scripts/deploy.js",
+    "compile": "hardhat compile",
+    "node": "hardhat node --port 8545 --hostname 0.0.0.0",
+    "deploy:local": "hardhat run --network localhost scripts/deploy.js",
     "deploy:rinkeby": "hardhat run scripts/deploy.js --network rinkeby"
   },
   "keywords": [],

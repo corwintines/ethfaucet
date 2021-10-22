@@ -28,7 +28,7 @@ module.exports = {
       blockGasLimit: GAS_LIMIT,
     },
     localhost: {
-      url: 'http://127.0.0.1:18545',
+      url: 'http://127.0.0.1:8545',
       timeout: 60000,
       gas: GAS_LIMIT,
       blockGasLimit: GAS_LIMIT,
